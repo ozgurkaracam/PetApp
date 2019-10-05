@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.SignUpActivity">
-
+    tools:context=".Activities.LoginActivity">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,19 +37,13 @@
                 android:id="@+id/imageView"
                 android:src="@drawable/anasayfa"
                 android:layout_height="200dp" />
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email Adresinizi Giriniz."
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="20dp"/>
             <EditText
-                android:id="@+id/editUsername"
-                android:layout_marginTop="5dp"
+                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kullanıcı Adınızı giriniz."/>
+                android:hint="Email Adresinizi Giriniz."
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"/>
             <EditText
                 android:layout_marginTop="5dp"
                 android:id="@+id/editPassword"
@@ -62,11 +55,11 @@
 
                 android:inputType="textPassword"/>
             <Button
-                android:id="@+id/buttonSignUp"
+                android:id="@+id/buttonSignIn"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Üye Ol!"
+                android:text="Giriş Yap!"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:background="@android:color/holo_orange_light"
@@ -75,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bir Hesabım Var..."
+                android:text="Kayıt Ol"
                 android:layout_marginTop="5dp"
                 android:layout_gravity="right"
                 />
@@ -83,4 +76,5 @@
 
 
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
