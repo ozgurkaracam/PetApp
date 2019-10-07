@@ -1,6 +1,7 @@
 package com.example.veterineruygulamas.RestApi;
 
 
+import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
 
 import retrofit2.Call;
@@ -14,5 +15,10 @@ public interface ApiService {
     Call<SignUpPojo> at(@Field("username") String username,
                         @Field("emailadress") String emailadress,
                         @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("signin.php")
+    Call<SignInPojos> signIn(@Field("email") String email,
+                             @Field("password") String password);
 
 }

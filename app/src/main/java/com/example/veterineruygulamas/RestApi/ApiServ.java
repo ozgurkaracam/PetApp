@@ -1,5 +1,6 @@
 package com.example.veterineruygulamas.RestApi;
 
+import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
 
 import retrofit2.Call;
@@ -18,6 +19,10 @@ public class ApiServ {
 
     public Call<SignUpPojo> signUp(String username,String emailadress,String password){
         return apis.at(username,emailadress,password);
+    }
+
+    public Call<SignInPojos> signIn(String email,String password){
+        return apis.signIn(email,password);
     }
 
 }
