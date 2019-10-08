@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
 import com.example.veterineruygulamas.R;
 import com.example.veterineruygulamas.RestApi.ApiServ;
+import com.example.veterineruygulamas.Utils.Auth;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,6 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<SignUpPojo> call, Response<SignUpPojo> response) {
                         Toast.makeText(SignUpActivity.this,response.body().getMessage(),Toast.LENGTH_SHORT).show();
+                        if(response.body().getStatus()==1){}
+                        else{}
                     }
 
                     @Override

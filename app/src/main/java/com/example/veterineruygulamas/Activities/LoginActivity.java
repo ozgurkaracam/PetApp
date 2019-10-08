@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.R;
 import com.example.veterineruygulamas.RestApi.ApiServ;
+import com.example.veterineruygulamas.Utils.Auth;
 
 import org.w3c.dom.Text;
 
@@ -30,6 +32,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if(new Auth(LoginActivity.this).isAuth()){
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            finish();
+        }
+
         kayitOlText=findViewById(R.id.kayitOlText);
         buttonSignIn=findViewById(R.id.buttonSignIn);
         apiServ=new ApiServ();
@@ -49,6 +56,11 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<SignInPojos> call, Response<SignInPojos> response) {
                         Toast.makeText(LoginActivity.this,response.body().getMessage(),Toast.LENGTH_SHORT).show();
+                        if(response.body().getStatus()==1){
+                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                            new Auth(LoginActivity.this).setAuth(5,response.body().getUsername(),loginEmail.getText().toString());
+
+                        }
                     }
 
                     @Override
