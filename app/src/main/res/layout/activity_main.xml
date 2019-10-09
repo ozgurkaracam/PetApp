@@ -14,6 +14,52 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSanalKarneler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#FFB74D"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingTop="5dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:textAlignment="center">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:src="@drawable/vaccine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-black"
+                android:text="Sanal Karneler"
+                android:textColor="#BF360C"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -32,10 +78,11 @@
             android:textAlignment="center">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="left|center"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:src="@drawable/dog" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -43,7 +90,7 @@
                 android:layout_gravity="left|center"
                 android:layout_weight="3"
                 android:fontFamily="sans-serif-black"
-                android:text="Petlerim"
+                android:text="Aşı Takvimi"
                 android:textColor="#BF360C"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -56,225 +103,139 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        app:cardBackgroundColor="#FFB74D"-->
-<!--        app:cardCornerRadius="10dp"-->
-<!--        app:cardElevation="5dp"-->
-<!--        app:contentPadding="5dp"-->
-<!--        app:contentPaddingBottom="5dp"-->
-<!--        app:contentPaddingTop="5dp">-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#FFB74D"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingTop="5dp">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="10dp"-->
-<!--            android:textAlignment="center">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:textAlignment="center">
 
-<!--            <ImageView-->
-<!--                android:layout_width="75dp"-->
-<!--                android:layout_height="75dp"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/pet" />-->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:src="@drawable/question" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="3"-->
-<!--                android:fontFamily="sans-serif-black"-->
-<!--                android:text="Aşı Takvimi"-->
-<!--                android:textColor="#BF360C"-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-black"
+                android:text="Soru Sor"
+                android:textColor="#BF360C"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:src="@drawable/arrow" />-->
-<!--        </LinearLayout>-->
-<!--    </androidx.cardview.widget.CardView>-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        app:cardBackgroundColor="#FFB74D"-->
-<!--        app:cardCornerRadius="10dp"-->
-<!--        app:cardElevation="5dp"-->
-<!--        app:contentPadding="5dp"-->
-<!--        app:contentPaddingBottom="5dp"-->
-<!--        app:contentPaddingTop="5dp">-->
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="10dp"-->
-<!--            android:textAlignment="center">-->
 
-<!--            <ImageView-->
-<!--                android:layout_width="75dp"-->
-<!--                android:layout_height="75dp"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/pet" />-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#FFB74D"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingTop="5dp">
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="3"-->
-<!--                android:fontFamily="sans-serif-black"-->
-<!--                android:text="Soru Sor"-->
-<!--                android:textColor="#BF360C"-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:textAlignment="center">
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:src="@drawable/arrow" />-->
-<!--        </LinearLayout>-->
-<!--    </androidx.cardview.widget.CardView>-->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:src="@drawable/duyuru" />
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        app:cardBackgroundColor="#FFB74D"-->
-<!--        app:cardCornerRadius="10dp"-->
-<!--        app:cardElevation="5dp"-->
-<!--        app:contentPadding="5dp"-->
-<!--        app:contentPaddingBottom="5dp"-->
-<!--        app:contentPaddingTop="5dp">-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-black"
+                android:text="Duyurular"
+                android:textColor="#BF360C"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="10dp"-->
-<!--            android:textAlignment="center">-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-<!--            <ImageView-->
-<!--                android:layout_width="75dp"-->
-<!--                android:layout_height="75dp"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/pet" />-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#FFB74D"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingTop="5dp">
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="3"-->
-<!--                android:fontFamily="sans-serif-black"-->
-<!--                android:text="Cevaplar"-->
-<!--                android:textColor="#BF360C"-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:textAlignment="center">
 
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:src="@drawable/arrow" />-->
-<!--        </LinearLayout>-->
-<!--    </androidx.cardview.widget.CardView>-->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:src="@drawable/discount" />
 
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        app:cardBackgroundColor="#FFB74D"-->
-<!--        app:cardCornerRadius="10dp"-->
-<!--        app:cardElevation="5dp"-->
-<!--        app:contentPadding="5dp"-->
-<!--        app:contentPaddingBottom="5dp"-->
-<!--        app:contentPaddingTop="5dp">-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="3"
+                android:fontFamily="sans-serif-black"
+                android:text="Kampanyalar"
+                android:textColor="#BF360C"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="10dp"-->
-<!--            android:textAlignment="center">-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="75dp"-->
-<!--                android:layout_height="75dp"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/pet" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="3"-->
-<!--                android:fontFamily="sans-serif-black"-->
-<!--                android:text="Duyurular"-->
-<!--                android:textColor="#BF360C"-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:src="@drawable/arrow" />-->
-<!--        </LinearLayout>-->
-<!--    </androidx.cardview.widget.CardView>-->
-
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        app:cardBackgroundColor="#FFB74D"-->
-<!--        app:cardCornerRadius="10dp"-->
-<!--        app:cardElevation="5dp"-->
-<!--        app:contentPadding="5dp"-->
-<!--        app:contentPaddingBottom="5dp"-->
-<!--        app:contentPaddingTop="5dp">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:padding="10dp"-->
-<!--            android:textAlignment="center">-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="75dp"-->
-<!--                android:layout_height="75dp"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/pet" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:layout_weight="3"-->
-<!--                android:fontFamily="sans-serif-black"-->
-<!--                android:text="Kampanyalar"-->
-<!--                android:textColor="#BF360C"-->
-<!--                android:textSize="20dp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="left|center"-->
-<!--                android:src="@drawable/arrow" />-->
-<!--        </LinearLayout>-->
-<!--    </androidx.cardview.widget.CardView>-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 
