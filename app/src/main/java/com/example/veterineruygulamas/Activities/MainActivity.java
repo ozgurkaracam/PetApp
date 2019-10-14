@@ -9,13 +9,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.veterineruygulamas.R;
 import com.example.veterineruygulamas.Utils.Auth;
 
 public class MainActivity extends AppCompatActivity {
     Auth auth;
-    CardView sanalKarneler;
+    CardView sanalKarneler,soruSorCardView;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private void arragements(){
         auth=new Auth(MainActivity.this);
         sanalKarneler=findViewById(R.id.cardViewSanalKarneler);
+        soruSorCardView=findViewById(R.id.soruSorCardView);
+        toolbar=findViewById(R.id.toolbar);
     }
     private void authcontrol(){
 
@@ -40,5 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,PetsActivity.class));
             }
         });
+
+        soruSorCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,SoruActivity.class));
+            }
+        });
+
     }
 }

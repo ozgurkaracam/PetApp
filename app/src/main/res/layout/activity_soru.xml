@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SoruActivity"
+    android:background="#F0F4C3"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:id="@+id/linearLayout">
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:textSize="20dp"
+     android:text="Sorunuzu Sorun."
+     android:textStyle="bold"
+     android:textColor="#BF360C"
+     android:gravity="top|center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="150dp"
+        android:hint="sorunuzu yazın"
+        android:id="@+id/editTextSoru"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Soru Sor!"
+        android:background="#FFB74D"
+        android:textColor="#FFFF"
+        android:textSize="20dp"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonSoruSor"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:textSize="20dp"
+        android:textColor="#BF360C"
+        android:textStyle="bold"
+        android:text="Daha Önceki Sorularınız."
+        />
+</LinearLayout>

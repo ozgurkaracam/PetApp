@@ -4,6 +4,7 @@ package com.example.veterineruygulamas.RestApi;
 import com.example.veterineruygulamas.Pojos.PetPojos;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
+import com.example.veterineruygulamas.Pojos.SoruPojo;
 
 import java.util.List;
 
@@ -28,5 +29,10 @@ public interface ApiService {
 
     @GET("pets/{id}")
     Call<List<PetPojos>> getPets(@Path("id") String id);
+
+    @FormUrlEncoded
+    @POST("soru/")
+    Call<List<SoruPojo>> postSoru(@Field("questiontext") String questiontext,
+                                  @Field("createor") String creator);
 
 }

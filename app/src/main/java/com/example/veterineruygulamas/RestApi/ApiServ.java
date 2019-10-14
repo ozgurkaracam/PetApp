@@ -3,6 +3,7 @@ package com.example.veterineruygulamas.RestApi;
 import com.example.veterineruygulamas.Pojos.PetPojos;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
+import com.example.veterineruygulamas.Pojos.SoruPojo;
 
 import java.util.List;
 
@@ -30,6 +31,10 @@ public class ApiServ {
 
     public Call<List<PetPojos>> getPets(String id){
         return apis.getPets(id);
+    }
+
+    public Call<List<SoruPojo>> postSoru(String questiontext, String creator){
+        return apis.postSoru(questiontext,creator);
     }
 
 }

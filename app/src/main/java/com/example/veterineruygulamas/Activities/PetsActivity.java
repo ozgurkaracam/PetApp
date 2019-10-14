@@ -41,6 +41,7 @@ public class PetsActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call<List<PetPojos>> call, Response<List<PetPojos>> response) {
+
                     if(response.isSuccessful()){
                         for(PetPojos petPojos: response.body()){
                             petList.add(new PetAdapterModal(petPojos.getImage(),petPojos.getAd(),petPojos.getCins()));
@@ -70,8 +71,9 @@ public class PetsActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        finish();
-
+    protected void onResume() {
+        super.onResume();
+        petAdapter.notifyDataSetChanged();
+        recyclerView.setAdapter(petAdapter);
     }
 }
