@@ -6,18 +6,26 @@ import com.google.gson.annotations.SerializedName;
 
 public class SignInPojos {
 
+    @SerializedName("id")
+    @Expose
+    private String id;
     @SerializedName("message")
     @Expose
     private String message;
     @SerializedName("status")
     @Expose
     private Integer status;
-    @SerializedName("id")
-    @Expose
-    private String id;
     @SerializedName("username")
     @Expose
     private String username;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getMessage() {
         return message;
@@ -33,14 +41,6 @@ public class SignInPojos {
 
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getUsername() {

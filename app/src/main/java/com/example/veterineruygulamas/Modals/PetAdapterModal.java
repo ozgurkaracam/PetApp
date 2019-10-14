@@ -5,6 +5,9 @@ public class PetAdapterModal {
     private String ad;
     private String cins;
 
+    public PetAdapterModal() {
+    }
+
     public PetAdapterModal(String image, String ad, String cins) {
         this.image = image;
         this.ad = ad;

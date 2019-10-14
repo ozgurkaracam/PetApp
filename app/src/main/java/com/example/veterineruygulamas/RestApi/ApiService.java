@@ -1,24 +1,32 @@
 package com.example.veterineruygulamas.RestApi;
 
 
+import com.example.veterineruygulamas.Pojos.PetPojos;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface ApiService {
     @FormUrlEncoded
-    @POST("signup.php")
+    @POST("users")
     Call<SignUpPojo> at(@Field("username") String username,
                         @Field("emailadress") String emailadress,
                         @Field("password") String password);
 
     @FormUrlEncoded
-    @POST("signin.php")
-    Call<SignInPojos> signIn(@Field("email") String email,
+    @POST("users/login")
+    Call<SignInPojos> signIn(@Field("emailadress") String email,
                              @Field("password") String password);
+
+    @GET("pets/{id}")
+    Call<List<PetPojos>> getPets(@Path("id") String id);
 
 }

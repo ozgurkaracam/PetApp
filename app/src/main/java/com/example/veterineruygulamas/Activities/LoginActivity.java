@@ -28,10 +28,12 @@ public class LoginActivity extends AppCompatActivity {
     Button buttonSignIn;
     ApiServ apiServ;
     EditText loginEmail,loginPassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //new Auth(LoginActivity.this).outAuth();
         if(new Auth(LoginActivity.this).isAuth()){
             startActivity(new Intent(LoginActivity.this,MainActivity.class));
             finish();
@@ -58,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,response.body().getMessage(),Toast.LENGTH_SHORT).show();
                         if(response.body().getStatus()==1){
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                            new Auth(LoginActivity.this).setAuth(5,response.body().getUsername(),loginEmail.getText().toString());
+                            new Auth(LoginActivity.this).setAuth(response.body().getId(),response.body().getUsername(),loginEmail.getText().toString());
 
                         }
                     }

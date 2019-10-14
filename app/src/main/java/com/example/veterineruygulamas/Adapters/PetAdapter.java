@@ -39,9 +39,10 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull PetHolder holder, int position) {
+
             holder.petName.setText(PetModal.get(position).getAd());
             holder.petCins.setText(PetModal.get(position).getCins());
-        //Picasso.get().load(PetModal.get(position).getImage()).into(holder.image);
+        Picasso.get().load(PetModal.get(position).getImage()).into(holder.image);
 
 
 

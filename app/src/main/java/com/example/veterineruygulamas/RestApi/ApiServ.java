@@ -1,7 +1,10 @@
 package com.example.veterineruygulamas.RestApi;
 
+import com.example.veterineruygulamas.Pojos.PetPojos;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -14,7 +17,7 @@ public class ApiServ {
 
     public ApiServ() {
         this.retrofit = new Retrofit.Builder().baseUrl(APIUrl.BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();;
-        this.apis = this.retrofit.create(ApiService.class);;
+        this.apis = this.retrofit.create(ApiService.class);
     }
 
     public Call<SignUpPojo> signUp(String username,String emailadress,String password){
@@ -23,6 +26,10 @@ public class ApiServ {
 
     public Call<SignInPojos> signIn(String email,String password){
         return apis.signIn(email,password);
+    }
+
+    public Call<List<PetPojos>> getPets(String id){
+        return apis.getPets(id);
     }
 
 }

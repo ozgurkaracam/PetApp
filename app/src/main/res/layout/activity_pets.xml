@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.PetsActivity">
+    tools:context=".Activities.PetsActivity"
+    android:background="#F0F4C3">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -9,7 +9,7 @@ import com.example.veterineruygulamas.Activities.MainActivity;
 
 public class Auth {
     private SharedPreferences sharedPreferences;
-    private int id;
+    String  id;
     private String username;
     private String email;
     private boolean isAuth;
@@ -21,14 +21,14 @@ public class Auth {
             this.editor=sharedPreferences.edit();
 
     }
-    public void setAuth(int id,String username,String email){
+    public void setAuth(String id,String username,String email){
         this.email=email;
         this.id=id;
         this.username=username;
         this.isAuth=true;
 
         this.editor.putString("email",  this.email);
-        this.editor.putInt("id",this.id);
+        this.editor.putString("id",this.id);
         this.editor.putString("username",this.username);
         this.editor.putBoolean("isAuth", this.isAuth);
         this.editor.commit();
@@ -40,7 +40,7 @@ public class Auth {
         return this.sharedPreferences.getString("email",null);
     }
     public String getId(){
-        return this.sharedPreferences.getString("id",null);
+        return this.sharedPreferences.getString("id","denemeee");
     }
     public String getUsername(){
         return this.sharedPreferences.getString("username",null);
