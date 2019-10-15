@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Auth auth;
     CardView sanalKarneler,soruSorCardView;
     Toolbar toolbar;
+    TextView cikisyaptext,hosgeldiniztext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
         auth=new Auth(MainActivity.this);
         sanalKarneler=findViewById(R.id.cardViewSanalKarneler);
         soruSorCardView=findViewById(R.id.soruSorCardView);
-        toolbar=findViewById(R.id.toolbar);
+        cikisyaptext=findViewById(R.id.cikisyaptext);
+        hosgeldiniztext=findViewById(R.id.hosgeldiniztext);
+        hosgeldiniztext.setText("Hoşgeldiniz :"+auth.getUsername());
     }
     private void authcontrol(){
 
@@ -49,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,SoruActivity.class));
+            }
+        });
+        cikisyaptext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.outAuth();
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
             }
         });
 

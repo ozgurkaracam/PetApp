@@ -32,12 +32,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hoşgeldiniz :"
+        android:id="@+id/hosgeldiniztext"
         android:layout_weight="1"
         android:textColor="#FFFF"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Çıkış Yap"
+        android:id="@+id/cikisyaptext"
         android:layout_weight="1"
         android:textAlignment="textEnd"
         android:textColor="#FFFF"/>

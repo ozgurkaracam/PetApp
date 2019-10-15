@@ -36,5 +36,9 @@ public class ApiServ {
     public Call<List<SoruPojo>> postSoru(String questiontext, String creator){
         return apis.postSoru(questiontext,creator);
     }
+    public Call<List<SoruPojo>> getSoru(String id){
+        return apis.getSoru(id);
+    }
 
+    public Call<List<SoruPojo>> deleteSoru(String id) {return apis.deleteSoru(id);}
 }

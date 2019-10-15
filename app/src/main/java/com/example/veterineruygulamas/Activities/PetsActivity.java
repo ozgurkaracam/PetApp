@@ -46,6 +46,10 @@ public class PetsActivity extends AppCompatActivity {
                         for(PetPojos petPojos: response.body()){
                             petList.add(new PetAdapterModal(petPojos.getImage(),petPojos.getAd(),petPojos.getCins()));
                         }
+                        petAdapter=new PetAdapter(petList,PetsActivity.this);
+                        recyclerView.setAdapter(petAdapter);
+                        recyclerView.setHasFixedSize(true);
+                        recyclerView.setLayoutManager(new GridLayoutManager(PetsActivity.this,1));
                     }
 
             }
@@ -57,15 +61,6 @@ public class PetsActivity extends AppCompatActivity {
                     Log.e("e",t.getLocalizedMessage());
             }
         });
-        petList.add((new PetAdapterModal("https://petvetmat.com/wp-content/uploads/2016/10/vet.jpg","Hoşgeldiniz","Petleriniz Burada Listelenmektedir. Birini Seçiniz.")));
-
-        petAdapter=new PetAdapter(petList,PetsActivity.this);
-        recyclerView.setAdapter(petAdapter);
-        recyclerView.setHasFixedSize(true);
-        synchronized (recyclerView){
-            recyclerView.notifyAll();
-        }
-        recyclerView.setLayoutManager(new GridLayoutManager(this,1));
 
 
     }
@@ -73,7 +68,6 @@ public class PetsActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        petAdapter.notifyDataSetChanged();
         recyclerView.setAdapter(petAdapter);
     }
 }

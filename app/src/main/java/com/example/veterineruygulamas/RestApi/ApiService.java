@@ -9,6 +9,7 @@ import com.example.veterineruygulamas.Pojos.SoruPojo;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -33,6 +34,11 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("soru/")
     Call<List<SoruPojo>> postSoru(@Field("questiontext") String questiontext,
-                                  @Field("createor") String creator);
+                                  @Field("creator") String creator);
 
+    @GET("soru/{id}")
+    Call<List<SoruPojo>> getSoru(@Path("id") String id);
+
+    @DELETE("soru/{id}")
+    Call<List<SoruPojo>> deleteSoru(@Path("id") String id);
 }

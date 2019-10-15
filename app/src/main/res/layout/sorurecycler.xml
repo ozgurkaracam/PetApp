@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linearLayoutSoru">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#FFB74D"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingTop="5dp"
+        android:id="@+id/cardViewSoru"
+        android:clickable="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="1"
+                    android:src="@drawable/question" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_marginLeft="10dp"
+                    android:text="Buraya soru gelecek buraya soru gelecek buraya soru gelecek buraya soru gelecek buraya soru gelecek buraya soru gelecek buraya soru gelecek"
+                    android:textColor="#BF360C"
+                    android:id="@+id/textViewSoru"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sorunuz cevaplanmıştır."
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:id="@+id/cevapKontrol"/>
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
