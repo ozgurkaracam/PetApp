@@ -104,7 +104,9 @@
         app:cardElevation="5dp"
         app:contentPadding="5dp"
         app:contentPaddingBottom="5dp"
-        app:contentPaddingTop="5dp">
+        app:contentPaddingTop="5dp"
+        android:clickable="true"
+        android:id="@+id/takvimCardView">
 
         <LinearLayout
             android:layout_width="match_parent"

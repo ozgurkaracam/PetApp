@@ -16,7 +16,7 @@ import com.example.veterineruygulamas.Utils.Auth;
 
 public class MainActivity extends AppCompatActivity {
     Auth auth;
-    CardView sanalKarneler,soruSorCardView;
+    CardView sanalKarneler,soruSorCardView,takvimCardView;
     Toolbar toolbar;
     TextView cikisyaptext,hosgeldiniztext;
     @Override
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         soruSorCardView=findViewById(R.id.soruSorCardView);
         cikisyaptext=findViewById(R.id.cikisyaptext);
         hosgeldiniztext=findViewById(R.id.hosgeldiniztext);
+        takvimCardView=findViewById(R.id.takvimCardView);
         hosgeldiniztext.setText("Hoşgeldiniz :"+auth.getUsername());
     }
     private void authcontrol(){
@@ -59,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 auth.outAuth();
                 startActivity(new Intent(MainActivity.this,LoginActivity.class));
+            }
+        });
+
+        takvimCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,TakvimActivity.class));
             }
         });
 

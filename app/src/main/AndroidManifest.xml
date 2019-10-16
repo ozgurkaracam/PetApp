@@ -17,7 +17,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.SoruActivity"></activity>
+        <activity android:name=".Activities.TakvimActivity"></activity>
+        <activity android:name=".Activities.SoruActivity" />
         <activity android:name=".Activities.PetsActivity" />
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.SignUpActivity" />
