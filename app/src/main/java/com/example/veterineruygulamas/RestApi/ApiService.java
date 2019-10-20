@@ -2,6 +2,7 @@ package com.example.veterineruygulamas.RestApi;
 
 
 import com.example.veterineruygulamas.Pojos.AsiPojo;
+import com.example.veterineruygulamas.Pojos.DuyuruPojo;
 import com.example.veterineruygulamas.Pojos.PetPojos;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
@@ -45,4 +46,7 @@ public interface ApiService {
 
     @GET("asi/sahip/{id}")
     Call<List<AsiPojo>> getAsi(@Path("id") String id);
+
+    @GET("duyuru")
+    Call<List<DuyuruPojo>> getDuyuru();
 }

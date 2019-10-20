@@ -1,6 +1,7 @@
 package com.example.veterineruygulamas.RestApi;
 
 import com.example.veterineruygulamas.Pojos.AsiPojo;
+import com.example.veterineruygulamas.Pojos.DuyuruPojo;
 import com.example.veterineruygulamas.Pojos.PetPojos;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.Pojos.SignUpPojo;
@@ -44,4 +45,6 @@ public class ApiServ {
     public Call<List<SoruPojo>> deleteSoru(String id) {return apis.deleteSoru(id);}
 
     public Call<List<AsiPojo>> getAsi(String id){return apis.getAsi(id);}
+
+    public Call<List<DuyuruPojo>> getDuyuru(){return apis.getDuyuru();}
 }
