@@ -47,4 +47,6 @@ public class ApiServ {
     public Call<List<AsiPojo>> getAsi(String id){return apis.getAsi(id);}
 
     public Call<List<DuyuruPojo>> getDuyuru(){return apis.getDuyuru();}
+
+    public Call<List<AsiPojo>> getPetAsi(String id){return apis.getPetAsi(id);}
 }

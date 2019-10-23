@@ -35,17 +35,90 @@
                 android:textSize="20dp"
                 android:textColor="#BF360C"
                 android:textStyle="bold"
-                android:layout_marginTop="2dp"/>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"/>
             <TextView
                 android:id="@+id/petCins"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Golden Retreiver"
-                android:textSize="15dp"
+                android:text="Pet Cinsi :"
+                android:textSize="20dp"
                 android:textColor="#FF7043"
-                android:textStyle="bold"
-                android:layout_marginTop="2dp"/>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/textViewPetKilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Kilosu :"
+                android:textSize="20dp"
+                android:textColor="#FF7043"
+                android:layout_marginBottom="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="AŞI KARNESİ"
+                android:textSize="30dp"
+                android:textColor="#FF7043"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/petAsiKarnesi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:textColor="#FF7043"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="GELECEK AŞILAR"
+                android:layout_marginBottom="5dp"
+                android:textSize="30dp"
+                android:textColor="#FF7043"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/gelecekAsilar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:textColor="#FF7043"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="GÜNÜ GEÇEN AŞILAR"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/gunugecenbaslik"
+                android:visibility="invisible"
+                android:textSize="30dp"
+                android:textColor="#d50000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/gunuGecenAsilar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:textColor="#d50000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

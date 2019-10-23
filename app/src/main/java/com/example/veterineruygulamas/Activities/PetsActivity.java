@@ -44,7 +44,7 @@ public class PetsActivity extends AppCompatActivity {
 
                     if(response.isSuccessful()){
                         for(PetPojos petPojos: response.body()){
-                            petList.add(new PetAdapterModal(petPojos.getImage(),petPojos.getAd(),petPojos.getCins()));
+                            petList.add(new PetAdapterModal(petPojos.getImage(),petPojos.getAd(),petPojos.getCins(),petPojos.getId(),petPojos.getKilo()));
                         }
                         petAdapter=new PetAdapter(petList,PetsActivity.this);
                         recyclerView.setAdapter(petAdapter);

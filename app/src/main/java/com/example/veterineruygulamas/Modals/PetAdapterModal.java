@@ -4,14 +4,18 @@ public class PetAdapterModal {
     private String image;
     private String ad;
     private String cins;
+    private String id;
+    private int kilo;
 
     public PetAdapterModal() {
     }
 
-    public PetAdapterModal(String image, String ad, String cins) {
+    public PetAdapterModal(String image, String ad, String cins,String id,int kilo) {
         this.image = image;
         this.ad = ad;
         this.cins = cins;
+        this.id= id;
+        this.kilo=kilo;
     }
 
     public String getImage() {
@@ -33,6 +37,12 @@ public class PetAdapterModal {
     public String getCins() {
         return cins;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getKilo(){return kilo;}
 
     public void setCins(String cins) {
         this.cins = cins;

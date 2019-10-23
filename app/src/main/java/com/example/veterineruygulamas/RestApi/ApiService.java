@@ -49,4 +49,7 @@ public interface ApiService {
 
     @GET("duyuru")
     Call<List<DuyuruPojo>> getDuyuru();
+
+    @GET("asi/pet/{id}")
+    Call<List<AsiPojo>> getPetAsi(@Path("id") String id);
 }
