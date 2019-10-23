@@ -70,11 +70,12 @@ public class TakvimActivity extends AppCompatActivity {
                 for(AsiPojo asiPojo: response.body()) {
                     try {
                         calendarPickerView.selectDate(dateFormat.parse(asiPojo.getTarih()));
+                        clickdate(response.body());
 
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
-                    clickdate(asiPojo.getPet().getAd(),asiPojo.getAsiad());
+
 
                 }
                 if(response.body().size()==0){
@@ -93,7 +94,7 @@ public class TakvimActivity extends AppCompatActivity {
 
     }
 
-    private void clickdate(final String petad,final String asiad){
+    private void clickdate(final List<AsiPojo> asiPojo){
         calendarPickerView.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
             @Override
             public void onDateSelected(Date date) {
@@ -106,8 +107,21 @@ public class TakvimActivity extends AppCompatActivity {
                 AlertDialog.Builder builder=new AlertDialog.Builder(TakvimActivity.this);
                 builder.setCancelable(true);
                 builder.setTitle("Aşı Bilgi");
-                builder.setMessage(dateFormat.format(date)+" tarihinde "+petad+"'ın "+asiad+" aşısı var.");
+                String petad="";
+                String asiad="";
+                StringBuilder sb=new StringBuilder();
+                for(AsiPojo asi: asiPojo){
+                    if(asi.getTarih().equals(dateFormat.format(date))){
+                        asiad= asi.getAsiad();
+                        petad=asi.getPet().getAd();
+                        sb.append(dateFormat.format(date)+" tarihinde "+petad+"'ın "+asiad+" aşısı var.\n");
+                    }
+                }
+
+
+                builder.setMessage(sb);
                 builder.create().show();
+
                 calendarPickerView.selectDate(date);
 
             }
