@@ -21,7 +21,7 @@ import com.example.veterineruygulamas.Utils.Auth;
 
 public class MainActivity extends AppCompatActivity {
     Auth auth;
-    CardView sanalKarneler,soruSorCardView,takvimCardView,cardViewDuyuru,cardViewCallUs;
+    CardView sanalKarneler,soruSorCardView,takvimCardView,cardViewDuyuru,cardViewCallUs,cardViewMessageUs;
     Toolbar toolbar;
     TextView cikisyaptext,hosgeldiniztext;
 
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         takvimCardView=findViewById(R.id.takvimCardView);
         cardViewDuyuru=findViewById(R.id.cardViewDuyuru);
         cardViewCallUs=findViewById(R.id.cardViewCallUs);
+        cardViewMessageUs=findViewById(R.id.cardViewMessageUs);
         hosgeldiniztext.setText("Hoşgeldiniz :"+auth.getUsername());
     }
     private void authcontrol(){
@@ -95,6 +96,19 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        cardViewMessageUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_SENDTO,Uri.parse("smsto:+0905363475667"));
+                if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.SEND_SMS)!=PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.SEND_SMS},1);
+                }
+                else{
+                    startActivity(intent);
+                }
             }
         });
 

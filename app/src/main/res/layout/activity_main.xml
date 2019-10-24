@@ -53,194 +53,191 @@
         android:paddingTop="20dp">
 
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewSanalKarneler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="#FFB74D"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:contentPadding="5dp"
-        app:contentPaddingBottom="5dp"
-        app:contentPaddingTop="5dp"
-        android:clickable="true">
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSanalKarneler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:textAlignment="center">
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFB74D"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp"
+            app:contentPaddingBottom="5dp"
+            app:contentPaddingTop="5dp">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="left|center"
-                android:layout_weight="1"
-                android:src="@drawable/vaccine" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:layout_weight="3"
-                android:fontFamily="sans-serif-black"
-                android:text="Sanal Karneler"
-                android:textColor="#BF360C"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:src="@drawable/arrow" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="1"
+                    android:src="@drawable/vaccine" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="#FFB74D"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:contentPadding="5dp"
-        app:contentPaddingBottom="5dp"
-        app:contentPaddingTop="5dp"
-        android:clickable="true"
-        android:id="@+id/takvimCardView">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Sanal Karneler"
+                    android:textColor="#BF360C"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/takvimCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:textAlignment="center">
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFB74D"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp"
+            app:contentPaddingBottom="5dp"
+            app:contentPaddingTop="5dp">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="left|center"
-                android:layout_weight="1"
-                android:src="@drawable/dog" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:layout_weight="3"
-                android:fontFamily="sans-serif-black"
-                android:text="Aşı Takvimi"
-                android:textColor="#BF360C"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:src="@drawable/arrow" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="1"
+                    android:src="@drawable/dog" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="#FFB74D"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:contentPadding="5dp"
-        app:contentPaddingBottom="5dp"
-        app:contentPaddingTop="5dp"
-        android:clickable="true"
-        android:id="@+id/soruSorCardView">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Aşı Takvimi"
+                    android:textColor="#BF360C"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/soruSorCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:textAlignment="center">
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFB74D"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp"
+            app:contentPaddingBottom="5dp"
+            app:contentPaddingTop="5dp">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="left|center"
-                android:layout_weight="1"
-                android:src="@drawable/question" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:layout_weight="3"
-                android:fontFamily="sans-serif-black"
-                android:text="Soru Sor"
-                android:textColor="#BF360C"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:src="@drawable/arrow" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="1"
+                    android:src="@drawable/question" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Soru Sor"
+                    android:textColor="#BF360C"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="#FFB74D"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:contentPadding="5dp"
-        app:contentPaddingBottom="5dp"
-        app:contentPaddingTop="5dp"
-        android:clickable="true"
-        android:id="@+id/cardViewDuyuru"
-        >
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDuyuru"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:textAlignment="center">
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFB74D"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp"
+            app:contentPaddingBottom="5dp"
+            app:contentPaddingTop="5dp">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="left|center"
-                android:layout_weight="1"
-                android:src="@drawable/duyuru" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:layout_weight="3"
-                android:fontFamily="sans-serif-black"
-                android:text="Duyurular"
-                android:textColor="#BF360C"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:src="@drawable/arrow" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="1"
+                    android:src="@drawable/duyuru" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Duyurular"
+                    android:textColor="#BF360C"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -287,6 +284,53 @@
                 android:src="@drawable/arrow" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#FFB74D"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp"
+            app:contentPaddingBottom="5dp"
+            app:contentPaddingTop="5dp"
+            android:id="@+id/cardViewMessageUs">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center"
+                >
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="1"
+                    android:src="@drawable/sms" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Bize Yazın"
+                    android:textColor="#BF360C"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
 
     </LinearLayout>
     </ScrollView>
