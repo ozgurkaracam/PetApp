@@ -19,7 +19,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.DuyuruActivity"></activity>
+        <activity android:name=".Activities.admin.AdminMainActivity"></activity>
+        <activity android:name=".Activities.DuyuruActivity" />
         <activity android:name=".Activities.TakvimActivity" />
         <activity android:name=".Activities.SoruActivity" />
         <activity android:name=".Activities.PetsActivity" />

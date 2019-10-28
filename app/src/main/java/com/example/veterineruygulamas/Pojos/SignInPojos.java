@@ -18,6 +18,9 @@ public class SignInPojos {
     @SerializedName("username")
     @Expose
     private String username;
+    @SerializedName("role")
+    @Expose
+    private Integer role;
 
     public String getId() {
         return id;
@@ -50,5 +53,9 @@ public class SignInPojos {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public void setRole(int role){this.role=role;}
+
+    public Integer getRole(){return this.role;}
 
 }

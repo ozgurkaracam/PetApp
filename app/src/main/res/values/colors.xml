@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="bgmain">#F0F4C3</color>
+    <color name="baslik1">#BF360C</color>
+    <color name="textrenk">#FFB74D</color>
 </resources>

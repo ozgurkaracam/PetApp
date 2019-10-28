@@ -15,22 +15,27 @@ public class Auth {
     private boolean isAuth;
     private Context context;
     private SharedPreferences.Editor editor;
+    private int role;
     public Auth(Context context){
             this.context=context;
             this.sharedPreferences= context.getSharedPreferences("auth",Context.MODE_PRIVATE);
             this.editor=sharedPreferences.edit();
 
     }
-    public void setAuth(String id,String username,String email){
+    public int getRole(){
+        return this.sharedPreferences.getInt("role",0);
+    }
+    public void setAuth(String id,String username,String email,int role){
         this.email=email;
         this.id=id;
         this.username=username;
         this.isAuth=true;
-
+        this.role=role;
         this.editor.putString("email",  this.email);
         this.editor.putString("id",this.id);
         this.editor.putString("username",this.username);
         this.editor.putBoolean("isAuth", this.isAuth);
+        this.editor.putInt("role",this.role);
         this.editor.commit();
     }
     public boolean isAuth(){

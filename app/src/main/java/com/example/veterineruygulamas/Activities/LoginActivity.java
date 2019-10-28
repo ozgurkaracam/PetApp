@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.veterineruygulamas.Activities.admin.AdminMainActivity;
 import com.example.veterineruygulamas.Pojos.SignInPojos;
 import com.example.veterineruygulamas.R;
 import com.example.veterineruygulamas.RestApi.ApiServ;
@@ -28,14 +29,19 @@ public class LoginActivity extends AppCompatActivity {
     Button buttonSignIn;
     ApiServ apiServ;
     EditText loginEmail,loginPassword;
+    Auth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //new Auth(LoginActivity.this).outAuth();
-        if(new Auth(LoginActivity.this).isAuth()){
-            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+        auth=new Auth(this);
+        if(auth.isAuth()){
+            if(auth.getRole()==1)
+                startActivity(new Intent(LoginActivity.this,AdminMainActivity.class));
+            else
+                startActivity(new Intent(LoginActivity.this,MainActivity.class));
             finish();
         }
 
@@ -59,8 +65,12 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(Call<SignInPojos> call, Response<SignInPojos> response) {
                         Toast.makeText(LoginActivity.this,response.body().getMessage(),Toast.LENGTH_SHORT).show();
                         if(response.body().getStatus()==1){
-                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                            new Auth(LoginActivity.this).setAuth(response.body().getId(),response.body().getUsername(),loginEmail.getText().toString());
+                            int role=response.body().getRole();
+                            new Auth(LoginActivity.this).setAuth(response.body().getId(),response.body().getUsername(),loginEmail.getText().toString(),role);
+                            if(role==0)
+                                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                            if(role==1)
+                                startActivity(new Intent(LoginActivity.this, AdminMainActivity.class));
 
                         }
                     }

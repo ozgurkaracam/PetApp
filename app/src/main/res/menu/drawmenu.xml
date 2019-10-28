@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/home" android:id="@+id/action_home" android:title="Ana Sayfa" />
+    <item android:icon="@drawable/users" android:id="@+id/action_kullaniciYonetimi" android:title="Kullanıcı Yönetimi"></item>
+    <item android:icon="@drawable/animal" android:id="@+id/action_petYonetimi" android:title="Pet Yönetimi"></item>
+    <item android:icon="@drawable/duyuru" android:id="@+id/action_DuyuruYonetimi" android:title="Duyuru Yönetimi"></item>
+    <item android:icon="@drawable/vaccine" android:id="@+id/action_asiYonetimi" android:title="Aşı Yönetimi"></item>
+    <item android:icon="@drawable/question" android:id="@+id/action_gelenSorular" android:title="Gelen Sorular" />
+    <item android:icon="@drawable/notification" android:id="@+id/action_bildirimGonder" android:title="Bildirim Gönder"></item>
+</menu>
