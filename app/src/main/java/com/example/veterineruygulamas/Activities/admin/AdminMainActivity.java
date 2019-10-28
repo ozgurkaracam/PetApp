@@ -9,17 +9,21 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.veterineruygulamas.Activities.LoginActivity;
 import com.example.veterineruygulamas.Fragments.MainAdminFragment;
 import com.example.veterineruygulamas.Fragments.gelensorular;
+import com.example.veterineruygulamas.Fragments.kullaniciyonetimi;
 import com.example.veterineruygulamas.R;
 import com.example.veterineruygulamas.Utils.Auth;
 import com.google.android.material.navigation.NavigationView;
@@ -30,6 +34,7 @@ public class AdminMainActivity extends AppCompatActivity implements NavigationVi
     Toolbar toolbar;
     Auth auth;
     DrawerLayout drawer;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,18 @@ public class AdminMainActivity extends AppCompatActivity implements NavigationVi
         ımageView=findViewById(R.id.adminLogout);
         toolbar=findViewById(R.id.admintoolbar);
         auth=new Auth(this);
+        progressDialog=new ProgressDialog(this);
+
+        progressDialog.setMessage("Giriş Yapılıyor...");
+        progressDialog.setCancelable(false);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.show();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                progressDialog.dismiss();
+            }
+        }, 1000);
         setSupportActionBar(toolbar);
         getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new MainAdminFragment()).commit();
 
@@ -67,10 +84,8 @@ public class AdminMainActivity extends AppCompatActivity implements NavigationVi
             }
         });
     }
-
-
     private void changeFragment(Fragment fragment){
-        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameLayout,fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,fragment).commit();
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -81,8 +96,13 @@ public class AdminMainActivity extends AppCompatActivity implements NavigationVi
             case R.id.action_home:
                 changeFragment(new MainAdminFragment());
                 break;
+            case R.id.action_kullaniciYonetimi:
+                changeFragment(new kullaniciyonetimi());
+                break;
         }
         drawer.closeDrawers();
         return false;
     }
+
+
 }

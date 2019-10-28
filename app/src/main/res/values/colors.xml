@@ -6,4 +6,5 @@
     <color name="bgmain">#F0F4C3</color>
     <color name="baslik1">#BF360C</color>
     <color name="textrenk">#FFB74D</color>
+    <color name="cardbackground">#F5F5F5</color>
 </resources>
